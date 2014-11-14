@@ -34,24 +34,50 @@ Page {
         Row {
             id: menu
             anchors.horizontalCenter: parent.horizontalCenter
+            // Workaround: we don't want the Slider animation!
+            height: 95
             spacing: 3
 
             IconButton {
-                icon.source: "image://theme/icon-camera-ec-minus05"
+                icon.source: "image://theme/icon-camera-focus"
+                anchors.verticalCenter: parent.verticalCenter
+
+                // default value for the rubber
+                property real prevLineWidth: 20;
+
                 onClicked: {
-                    canvas.lineWidth--;
+                    if (canvas.strokeStyle === "#000000") {
+                        canvas.strokeStyle = "#ffffff";
+                    } else {
+                        canvas.strokeStyle = "#000000";
+                    }
+
+                    var currentLineWidth = size.value;
+                    size.value = prevLineWidth;
+                    prevLineWidth = currentLineWidth;
                 }
             }
 
-            IconButton {
-                icon.source: "image://theme/icon-camera-ec-plus05"
-                onClicked: {
-                    canvas.lineWidth++;
+            Slider {
+                id: size
+                minimumValue: 1
+                maximumValue: 30
+                stepSize: 1
+                value: 5
+                valueText: value
+                width: 400
+                // Workaround: we don't want the Slider animation!
+                height: 120
+
+                onValueChanged: {
+                    valueText = canvas.lineWidth = value;
                 }
             }
 
             IconButton {
                 icon.source: "image://theme/icon-m-clear"
+                anchors.verticalCenter: parent.verticalCenter
+
                 onClicked: {
                     clear = true;
                     canvas.requestPaint();
@@ -60,7 +86,7 @@ Page {
         }
 
         Rectangle {
-            height: parent.height - menu.implicitHeight
+            height: parent.height - menu.height
             width: parent.width
 
             Canvas {
@@ -69,6 +95,7 @@ Page {
                 antialiasing: true
 
                 property real lineWidth: 1
+                property string strokeStyle: "#000000"
 
                 onLineWidthChanged: requestPaint()
 
@@ -76,8 +103,10 @@ Page {
                     var ctx = getContext("2d");
                     ctx.fillStyle = "#ffffff";
                     ctx.lineCap = "round";
+                    ctx.lineJoin = "round";
                     ctx.lineWidth = lineWidth;
-                    ctx.strokeStyle = "#000000";
+                    ctx.miterLimit = 1;
+                    ctx.strokeStyle = strokeStyle;
 
                     if (clear === true) {
                         ctx.fillRect(0, 0, width, height);
@@ -88,7 +117,6 @@ Page {
                         ctx.lineTo(finishX, finishY);
                         ctx.closePath();
                         ctx.stroke();
-                        ctx.save();
 
                         startX = finishX;
                         startY = finishY;
