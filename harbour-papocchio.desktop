@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=harbour-papocchio
+Exec=harbour-papocchio
+Name=Papocchio
+Comment=Draw using your finger!
