@@ -21,10 +21,14 @@ import Sailfish.Silica 1.0
 
 Page {
 
-    property int startX;
-    property int startY;
-    property int finishX;
-    property int finishY;
+    property int startX
+    property int startY
+    property int finishX
+    property int finishY
+
+    readonly property real defaultStrokeSize: 5
+    readonly property string defaultStrokeColor: "#000000"
+    readonly property string defaultFillColor: "#ffffff"
 
     Column {
         anchors.fill: parent
@@ -44,10 +48,10 @@ Page {
                 property real prevLineWidth: 20;
 
                 onClicked: {
-                    if (canvas.strokeStyle === "#000000") {
-                        canvas.strokeStyle = "#ffffff";
+                    if (canvas.strokeStyle === defaultStrokeColor) {
+                        canvas.strokeStyle = defaultFillColor;
                     } else {
-                        canvas.strokeStyle = "#000000";
+                        canvas.strokeStyle = defaultStrokeColor;
                     }
 
                     var currentLineWidth = size.value;
@@ -61,7 +65,7 @@ Page {
                 minimumValue: 1
                 maximumValue: 30
                 stepSize: 1
-                value: 5
+                value: defaultStrokeSize
                 valueText: value
                 width: 400
                 // Workaround: we don't want the Slider animation!
@@ -91,8 +95,8 @@ Page {
                 anchors.fill: parent
                 antialiasing: true
 
-                property real lineWidth: 1
-                property string strokeStyle: "#000000"
+                property real lineWidth: defaultStrokeSize
+                property string strokeStyle: defaultStrokeColor
 
                 onLineWidthChanged: requestPaint()
 
@@ -105,7 +109,7 @@ Page {
 
                 onPaint: {
                     var ctx = getContext("2d");
-                    ctx.fillStyle = "#ffffff";
+                    ctx.fillStyle = defaultFillColor;
                     ctx.lineCap = "round";
                     ctx.lineJoin = "round";
                     ctx.lineWidth = lineWidth;
