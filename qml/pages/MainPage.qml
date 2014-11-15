@@ -26,17 +26,15 @@ Page {
     property int finishX;
     property int finishY;
 
-    property bool clear: false
-
     Column {
         anchors.fill: parent
 
         Row {
             id: menu
             anchors.horizontalCenter: parent.horizontalCenter
+            spacing: 3
             // Workaround: we don't want the Slider animation!
             height: 95
-            spacing: 3
 
             IconButton {
                 icon.source: "image://theme/icon-camera-focus"
@@ -79,8 +77,7 @@ Page {
                 anchors.verticalCenter: parent.verticalCenter
 
                 onClicked: {
-                    clear = true;
-                    canvas.requestPaint();
+                    canvas.clear();
                 }
             }
         }
@@ -99,6 +96,13 @@ Page {
 
                 onLineWidthChanged: requestPaint()
 
+                function clear()
+                {
+                    var ctx = getContext("2d");
+                    ctx.fillRect(0, 0, width, height);
+                    requestPaint();
+                }
+
                 onPaint: {
                     var ctx = getContext("2d");
                     ctx.fillStyle = "#ffffff";
@@ -108,19 +112,14 @@ Page {
                     ctx.miterLimit = 1;
                     ctx.strokeStyle = strokeStyle;
 
-                    if (clear === true) {
-                        ctx.fillRect(0, 0, width, height);
-                        clear = false;
-                    } else {
-                        ctx.beginPath();
-                        ctx.moveTo(startX, startY);
-                        ctx.lineTo(finishX, finishY);
-                        ctx.closePath();
-                        ctx.stroke();
+                    ctx.beginPath();
+                    ctx.moveTo(startX, startY);
+                    ctx.lineTo(finishX, finishY);
+                    ctx.closePath();
+                    ctx.stroke();
 
-                        startX = finishX;
-                        startY = finishY;
-                    }
+                    startX = finishX;
+                    startY = finishY;
                 }
 
                 MouseArea {
