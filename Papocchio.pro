@@ -9,7 +9,7 @@ OTHER_FILES += \
     qml/cover/CoverPage.qml \
     translations/*.ts \
     qml/pages/MainPage.qml \
-    qml/harbour-papocchio.qml \
+    qml/Papocchio.qml \
     harbour-papocchio.desktop \
     rpm/harbour-papocchio.changes \
     rpm/harbour-papocchio.spec \

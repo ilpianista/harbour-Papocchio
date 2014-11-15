@@ -22,7 +22,17 @@
 
 int main(int argc, char *argv[])
 {
+    QGuiApplication *app = SailfishApp::application(argc, argv);
 
-    return SailfishApp::main(argc, argv);
+    // Otherwise the Canvas is cleaned when the application is not
+    // marked as active. See for more:
+    // https://lists.sailfishos.org/pipermail/devel/2014-October/005065.html
+    QQuickView *view = SailfishApp::createView();
+    view->setSource(SailfishApp::pathTo("qml/Papocchio.qml"));
+    view->setPersistentOpenGLContext(true);
+    view->setPersistentSceneGraph(true);
+    view->show();
+
+    return app->exec();
 }
 
