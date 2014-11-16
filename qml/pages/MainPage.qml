@@ -54,6 +54,7 @@ Page {
                         canvas.strokeStyle = defaultStrokeColor;
                     }
 
+                    // Remember the stroke/rubber size
                     var currentLineWidth = size.value;
                     size.value = prevLineWidth;
                     prevLineWidth = currentLineWidth;
@@ -81,7 +82,11 @@ Page {
                 anchors.verticalCenter: parent.verticalCenter
 
                 onClicked: {
-                    canvas.clear();
+                    clear.execute(menu, qsTr("Clearing the canvas..."), function() { canvas.clear() });
+                }
+
+                RemorseItem {
+                    id: clear
                 }
             }
         }

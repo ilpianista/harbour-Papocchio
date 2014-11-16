@@ -9,4 +9,12 @@
         <translation type="unfinished"></translation>
     </message>
 </context>
+<context>
+    <name>MainPage</name>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="84"/>
+        <source>Clearing the canvas...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
 </TS>
