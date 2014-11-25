@@ -21,12 +21,8 @@ import Sailfish.Silica 1.0
 
 Page {
 
-    property int startX
-    property int startY
-    property int finishX
-    property int finishY
-
     readonly property real defaultStrokeSize: 5
+    readonly property real defaultRubberSize: 20
     readonly property string defaultStrokeColor: "#000000"
     readonly property string defaultFillColor: "#ffffff"
 
@@ -35,22 +31,29 @@ Page {
 
         Row {
             id: menu
-            anchors.horizontalCenter: parent.horizontalCenter
-            spacing: 3
-            // Workaround: we don't want the Slider animation!
-            height: 95
+            spacing: 10
+            width: parent.width
+            // Workaround: we don't want the Slider animation to resize this!
+            height: Theme.itemSizeMedium
 
-            IconButton {
-                icon.source: "image://theme/icon-camera-focus"
+            IconTextSwitch {
+                checked: true
+                icon.source: "image://theme/icon-s-edit"
                 anchors.verticalCenter: parent.verticalCenter
+                width: 120
+
+                // Don't waste space
+                rightMargin: 0
 
                 // default value for the rubber
-                property real prevLineWidth: 20;
+                property real prevLineWidth: defaultRubberSize;
 
-                onClicked: {
+                onCheckedChanged: {
                     if (canvas.strokeStyle === defaultStrokeColor) {
+                        icon.source = "image://theme/icon-camera-focus"
                         canvas.strokeStyle = defaultFillColor;
                     } else {
+                        icon.source = "image://theme/icon-s-edit"
                         canvas.strokeStyle = defaultStrokeColor;
                     }
 
@@ -68,9 +71,13 @@ Page {
                 stepSize: 1
                 value: defaultStrokeSize
                 valueText: value
-                width: 400
-                // Workaround: we don't want the Slider animation!
-                height: 120
+                width: 300
+
+                anchors.verticalCenter: parent.verticalCenter
+
+                // Don't waste space
+                leftMargin: 0
+                rightMargin: 0
 
                 onValueChanged: {
                     valueText = canvas.lineWidth = value;
@@ -99,6 +106,11 @@ Page {
                 id: canvas
                 anchors.fill: parent
                 antialiasing: true
+
+                property int startX
+                property int startY
+                property int finishX
+                property int finishY
 
                 property real lineWidth: defaultStrokeSize
                 property string strokeStyle: defaultStrokeColor
@@ -135,17 +147,17 @@ Page {
                     anchors.fill: parent
 
                     onPressed: {
-                        startX = finishX = mouseX;
-                        startY = finishY = mouseY;
+                        parent.startX = parent.finishX = mouseX;
+                        parent.startY = parent.finishY = mouseY;
                     }
 
                     onMouseXChanged: {
-                        finishX = mouseX;
+                        parent.finishX = mouseX;
                         parent.requestPaint();
                     }
 
                     onMouseYChanged: {
-                        finishY = mouseY;
+                        parent.finishY = mouseY;
                         parent.requestPaint();
                     }
                 }

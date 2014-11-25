@@ -12,7 +12,7 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="84"/>
+        <location filename="../qml/pages/MainPage.qml" line="92"/>
         <source>Clearing the canvas...</source>
         <translation type="unfinished"></translation>
     </message>
