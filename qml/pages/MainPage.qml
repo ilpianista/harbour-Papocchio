@@ -23,8 +23,8 @@ Page {
 
     readonly property real defaultStrokeSize: 5
     readonly property real defaultRubberSize: 20
-    readonly property string defaultStrokeColor: "#000000"
-    readonly property string defaultFillColor: "#ffffff"
+    readonly property color defaultStrokeColor: Qt.rgba(0, 0, 0, 1)
+    readonly property color defaultFillColor: Qt.rgba(1, 1, 1, 1)
 
     Column {
         anchors.fill: parent
@@ -49,7 +49,7 @@ Page {
                 property real prevLineWidth: defaultRubberSize;
 
                 onCheckedChanged: {
-                    if (canvas.strokeStyle === defaultStrokeColor) {
+                    if (canvas.strokeStyle == defaultStrokeColor) {
                         icon.source = "image://theme/icon-camera-focus"
                         canvas.strokeStyle = defaultFillColor;
                     } else {
@@ -71,7 +71,7 @@ Page {
                 stepSize: 1
                 value: defaultStrokeSize
                 valueText: value
-                width: 300
+                width: 240
 
                 anchors.verticalCenter: parent.verticalCenter
 
@@ -85,15 +85,37 @@ Page {
             }
 
             IconButton {
+                icon.source: "image://theme/icon-m-image"
+                anchors.verticalCenter: parent.verticalCenter
+
+                function pictureName() {
+                    var dateTime = new Date();
+                    return Qt.formatDateTime(dateTime, "yyyy-MM-dd-hh-mm-ss") + ".jpeg";
+                }
+
+                onClicked: {
+                    remorseSave.execute(menu, qsTr("Saving the canvas..."), function() {
+                        canvas.save(papocchioDir + pictureName());
+                    }, 3000);
+                }
+
+                RemorseItem {
+                    id: remorseSave
+                }
+            }
+
+            IconButton {
                 icon.source: "image://theme/icon-m-clear"
                 anchors.verticalCenter: parent.verticalCenter
 
                 onClicked: {
-                    clear.execute(menu, qsTr("Clearing the canvas..."), function() { canvas.clear() });
+                    remorseClear.execute(menu, qsTr("Clearing the canvas..."), function() {
+                        canvas.clear();
+                    });
                 }
 
                 RemorseItem {
-                    id: clear
+                    id: remorseClear
                 }
             }
         }
@@ -112,21 +134,31 @@ Page {
                 property int finishX
                 property int finishY
 
+                property bool initialize: true
+
                 property real lineWidth: defaultStrokeSize
                 property string strokeStyle: defaultStrokeColor
 
                 onLineWidthChanged: requestPaint()
 
-                function clear()
-                {
+                function clear() {
                     var ctx = getContext("2d");
+                    ctx.fillStyle = defaultFillColor;
                     ctx.fillRect(0, 0, width, height);
                     requestPaint();
                 }
 
                 onPaint: {
                     var ctx = getContext("2d");
-                    ctx.fillStyle = defaultFillColor;
+
+                    // The context is not available in Component.onCompleted
+                    // then we have to use a "exec-once workaround" to init
+                    // the canvas background
+                    if (initialize) {
+                        clear();
+                        initialize = false;
+                    }
+
                     ctx.lineCap = "round";
                     ctx.lineJoin = "round";
                     ctx.lineWidth = lineWidth;

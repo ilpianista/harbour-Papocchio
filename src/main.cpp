@@ -20,6 +20,8 @@
 
 #include <sailfishapp.h>
 
+QString papocchioDir();
+
 int main(int argc, char *argv[])
 {
     QGuiApplication *app = SailfishApp::application(argc, argv);
@@ -31,8 +33,26 @@ int main(int argc, char *argv[])
     view->setSource(SailfishApp::pathTo("qml/Papocchio.qml"));
     view->setPersistentOpenGLContext(true);
     view->setPersistentSceneGraph(true);
+
+    view->rootContext()->setContextProperty("papocchioDir", papocchioDir());
+
     view->show();
 
     return app->exec();
 }
 
+/**
+ * @brief papocchioDir just to be sure the directory where to save pictures
+ *        exists.
+ * @return the path to the directory where to save pictures.
+ */
+QString papocchioDir()
+{
+    QDir papocchioDir(QDir::homePath() + "/Pictures/Papocchio");
+
+    if (!papocchioDir.exists()) {
+        papocchioDir.mkpath(papocchioDir.absolutePath());
+    }
+
+    return QString(papocchioDir.absolutePath() + "/");
+}
