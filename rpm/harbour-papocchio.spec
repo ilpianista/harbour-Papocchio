@@ -16,7 +16,7 @@ Summary:    Paint using your finger
 Version:    1.1
 Release:    1
 Group:      Qt/Qt
-License:    MIT
+License:    GPLv3
 URL:        http://www.andreascarpino.it
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  harbour-papocchio.yaml
