@@ -24,18 +24,18 @@ QString papocchioDir();
 
 int main(int argc, char *argv[])
 {
-    QGuiApplication *app = SailfishApp::application(argc, argv);
+    QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
+    QScopedPointer<QQuickView> view(SailfishApp::createView());
 
     // Otherwise the Canvas is cleaned when the application is not
     // marked as active. See for more:
     // https://lists.sailfishos.org/pipermail/devel/2014-October/005065.html
-    QQuickView *view = SailfishApp::createView();
-    view->setSource(SailfishApp::pathTo("qml/Papocchio.qml"));
     view->setPersistentOpenGLContext(true);
     view->setPersistentSceneGraph(true);
 
     view->rootContext()->setContextProperty("papocchioDir", papocchioDir());
 
+    view->setSource(SailfishApp::pathTo("qml/Papocchio.qml"));
     view->show();
 
     return app->exec();
@@ -48,11 +48,12 @@ int main(int argc, char *argv[])
  */
 QString papocchioDir()
 {
-    QDir papocchioDir(QDir::homePath() + "/Pictures/Papocchio");
+    const QDir papocchioDir(QStandardPaths::writableLocation(QStandardPaths::PicturesLocation)
+                            + QDir::separator() + "Papocchio");
 
     if (!papocchioDir.exists()) {
         papocchioDir.mkpath(papocchioDir.absolutePath());
     }
 
-    return QString(papocchioDir.absolutePath() + "/");
+    return QString(papocchioDir.absolutePath() + QDir::separator());
 }
