@@ -27,6 +27,8 @@ int main(int argc, char *argv[])
     QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
     QScopedPointer<QQuickView> view(SailfishApp::createView());
 
+    QCoreApplication::setApplicationName(QStringLiteral("Papocchio"));
+
     // Otherwise the Canvas is cleaned when the application is not
     // marked as active. See for more:
     // https://lists.sailfishos.org/pipermail/devel/2014-October/005065.html
@@ -49,10 +51,12 @@ int main(int argc, char *argv[])
 QString papocchioDir()
 {
     const QDir papocchioDir(QStandardPaths::writableLocation(QStandardPaths::PicturesLocation)
-                            + QDir::separator() + "Papocchio");
+                            + QDir::separator() + QCoreApplication::applicationName());
 
     if (!papocchioDir.exists()) {
-        papocchioDir.mkpath(papocchioDir.absolutePath());
+        if (!papocchioDir.mkpath(papocchioDir.absolutePath())) {
+            qCritical() << "Cannot create dir!";
+        }
     }
 
     return QString(papocchioDir.absolutePath() + QDir::separator());
