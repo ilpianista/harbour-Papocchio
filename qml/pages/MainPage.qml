@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2014 Andrea Scarpino <me@andreascarpino.it>
+    Copyright (C) 2014-2015 Andrea Scarpino <me@andreascarpino.it>
     All rights reserved.
 
     This program is free software: you can redistribute it and/or modify
@@ -26,24 +26,24 @@ Page {
     readonly property color defaultStrokeColor: Qt.rgba(0, 0, 0, 1)
     readonly property color defaultFillColor: Qt.rgba(1, 1, 1, 1)
 
+    allowedOrientations: Orientation.All
+
     Column {
         anchors.fill: parent
 
         Row {
             id: menu
-            spacing: 10
+            spacing: Theme.paddingSmall
             width: parent.width
             // Workaround: we don't want the Slider animation to resize this!
             height: Theme.itemSizeMedium
 
             IconTextSwitch {
+                id: edit
                 checked: true
                 icon.source: "image://theme/icon-s-edit"
                 anchors.verticalCenter: parent.verticalCenter
                 width: 120
-
-                // Don't waste space
-                rightMargin: 0
 
                 // default value for the rubber
                 property real prevLineWidth: defaultRubberSize;
@@ -71,7 +71,7 @@ Page {
                 stepSize: 1
                 value: defaultStrokeSize
                 valueText: value
-                width: 240
+                width: parent.width - edit.width - save.width - clearBtn.width
 
                 anchors.verticalCenter: parent.verticalCenter
 
@@ -85,6 +85,7 @@ Page {
             }
 
             IconButton {
+                id: save
                 icon.source: "image://theme/icon-m-image"
                 anchors.verticalCenter: parent.verticalCenter
 
@@ -105,6 +106,7 @@ Page {
             }
 
             IconButton {
+                id: clearBtn
                 icon.source: "image://theme/icon-m-clear"
                 anchors.verticalCenter: parent.verticalCenter
 
