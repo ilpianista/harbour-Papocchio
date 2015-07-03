@@ -113,7 +113,7 @@ Page {
                 onClicked: {
                     remorseClear.execute(menu, qsTr("Clearing the canvas..."), function() {
                         canvas.clear();
-                    });
+                    }, 3000);
                 }
 
                 RemorseItem {

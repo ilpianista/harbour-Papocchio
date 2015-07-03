@@ -1,5 +1,7 @@
 * Fri Jul 03 2015 Andrea Scarpino <me@andreascarpino.it> 1.2-1
 - Landscape support.
+- Set clearing remorse action timeout to 3s.
+- Display Papocchio icon in cover.
 
 * Sat Nov 29 2014 Andrea Scarpino <me@andreascarpino.it> 1.1-1
 - Implemented 'Save' function.
