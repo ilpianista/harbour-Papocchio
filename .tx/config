@@ -1,0 +1,9 @@
+[main]
+host = https://www.transifex.com
+
+[papocchio.harbour-papocchiots]
+file_filter = translations/harbour-papocchio-<lang>.ts
+source_file = translations/harbour-papocchio.ts
+source_lang = en
+type = QT
+
