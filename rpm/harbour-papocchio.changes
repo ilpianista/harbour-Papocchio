@@ -1,5 +1,5 @@
-* Fri Jul 03 2015 Andrea Scarpino <me@andreascarpino.it> 1.2-1
-- Landscape support.
+* Sat Sep 12 2015 Andrea Scarpino <me@andreascarpino.it> 1.2-1
+- Add Italian translation.
 - Set clearing remorse action timeout to 3s.
 - Display Papocchio icon in cover.
 

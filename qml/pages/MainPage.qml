@@ -26,8 +26,6 @@ Page {
     readonly property color defaultStrokeColor: Qt.rgba(0, 0, 0, 1)
     readonly property color defaultFillColor: Qt.rgba(1, 1, 1, 1)
 
-    allowedOrientations: Orientation.All
-
     Column {
         anchors.fill: parent
 
