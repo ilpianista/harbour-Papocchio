@@ -29,6 +29,8 @@ int main(int argc, char *argv[])
 
     QCoreApplication::setApplicationName(QStringLiteral("Papocchio"));
 
+    view->setSource(SailfishApp::pathTo("qml/Papocchio.qml"));
+
     // Otherwise the Canvas is cleaned when the application is not
     // marked as active. See for more:
     // https://lists.sailfishos.org/pipermail/devel/2014-October/005065.html
@@ -37,7 +39,6 @@ int main(int argc, char *argv[])
 
     view->rootContext()->setContextProperty("papocchioDir", papocchioDir());
 
-    view->setSource(SailfishApp::pathTo("qml/Papocchio.qml"));
     view->show();
 
     return app->exec();
