@@ -17,4 +17,5 @@ OTHER_FILES += \
     translations/*.ts
 
 CONFIG += sailfishapp_i18n
-TRANSLATIONS += translations/harbour-lyrics-it.ts
+TRANSLATIONS += translations/harbour-lyrics-it.ts \
+    translations/harbour-papocchio-cs.ts
