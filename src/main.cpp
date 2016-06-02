@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2014 Andrea Scarpino <me@andreascarpino.it>
+    Copyright (C) 2014-2016 Andrea Scarpino <me@andreascarpino.it>
     All rights reserved.
 
     This program is free software: you can redistribute it and/or modify
@@ -28,6 +28,7 @@ int main(int argc, char *argv[])
     QScopedPointer<QQuickView> view(SailfishApp::createView());
 
     QCoreApplication::setApplicationName(QStringLiteral("Papocchio"));
+    QCoreApplication::setOrganizationDomain(QStringLiteral("it.andreascarpino"));
 
     view->setSource(SailfishApp::pathTo("qml/Papocchio.qml"));
 
