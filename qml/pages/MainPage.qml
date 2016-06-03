@@ -31,22 +31,21 @@ Page {
 
         Row {
             id: menu
-            spacing: Theme.paddingSmall
+            spacing: Theme.paddingMedium
             width: parent.width
             // Workaround: we don't want the Slider animation to resize this!
             height: Theme.itemSizeMedium
 
-            IconTextSwitch {
+            IconButton {
                 id: edit
-                checked: true
                 icon.source: "image://theme/icon-s-edit"
                 anchors.verticalCenter: parent.verticalCenter
-                width: 120
+                width: 50
 
                 // default value for the rubber
                 property real prevLineWidth: defaultRubberSize;
 
-                onCheckedChanged: {
+                onClicked: {
                     if (canvas.strokeStyle == defaultStrokeColor) {
                         icon.source = "image://theme/icon-camera-focus"
                         canvas.strokeStyle = defaultFillColor;
@@ -62,30 +61,11 @@ Page {
                 }
             }
 
-            Slider {
-                id: size
-                minimumValue: 1
-                maximumValue: 30
-                stepSize: 1
-                value: defaultStrokeSize
-                valueText: value
-                width: parent.width - edit.width - save.width - clearBtn.width
-
-                anchors.verticalCenter: parent.verticalCenter
-
-                // Don't waste space
-                leftMargin: 0
-                rightMargin: 0
-
-                onValueChanged: {
-                    valueText = canvas.lineWidth = value;
-                }
-            }
-
             IconButton {
                 id: save
                 icon.source: "image://theme/icon-m-image"
                 anchors.verticalCenter: parent.verticalCenter
+                width: 50
 
                 function pictureName() {
                     var dateTime = new Date();
@@ -103,10 +83,30 @@ Page {
                 }
             }
 
+            Slider {
+                id: size
+                minimumValue: 1
+                maximumValue: 30
+                stepSize: 1
+                value: defaultStrokeSize
+                valueText: value
+                width: parent.width - edit.width - save.width - clearBtn.width - quit.width - (Theme.paddingMedium * 4)
+                anchors.verticalCenter: parent.verticalCenter
+
+                // Don't waste space
+                leftMargin: 0
+                rightMargin: 0
+
+                onValueChanged: {
+                    valueText = canvas.lineWidth = value;
+                }
+            }
+
             IconButton {
                 id: clearBtn
                 icon.source: "image://theme/icon-m-clear"
                 anchors.verticalCenter: parent.verticalCenter
+                width: 50
 
                 onClicked: {
                     remorseClear.execute(menu, qsTr("Clearing the canvas..."), function() {
@@ -116,6 +116,23 @@ Page {
 
                 RemorseItem {
                     id: remorseClear
+                }
+            }
+
+            IconButton {
+                id: quit
+                icon.source: "image://theme/icon-m-close"
+                anchors.verticalCenter: parent.verticalCenter
+                width: 50
+
+                onClicked: {
+                    remorseQuit.execute(menu, qsTr("Quitting..."), function() {
+                        Qt.quit();
+                    }, 1000);
+                }
+
+                RemorseItem {
+                    id: remorseQuit
                 }
             }
         }

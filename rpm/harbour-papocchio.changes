@@ -1,3 +1,7 @@
+* Fri Jun 03 2016 Andrea Scarpino <me@andreascarpino.it> 1.3-1
+- Disable gestures.
+- Add Czech translation.
+
 * Sat Sep 12 2015 Andrea Scarpino <me@andreascarpino.it> 1.2-1
 - Add Italian translation.
 - Set clearing remorse action timeout to 3s.
