@@ -27,8 +27,8 @@ int main(int argc, char *argv[])
     QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
     QScopedPointer<QQuickView> view(SailfishApp::createView());
 
-    QCoreApplication::setApplicationName(QStringLiteral("Papocchio"));
-    QCoreApplication::setOrganizationDomain(QStringLiteral("it.andreascarpino"));
+    QCoreApplication::setApplicationName(QStringLiteral("harbour-papocchio"));
+    QCoreApplication::setOrganizationDomain(QStringLiteral("andreascarpino.it"));
 
     view->setSource(SailfishApp::pathTo("qml/Papocchio.qml"));
 
@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 QString papocchioDir()
 {
     const QDir papocchioDir(QStandardPaths::writableLocation(QStandardPaths::PicturesLocation)
-                            + QDir::separator() + QCoreApplication::applicationName());
+                            + QDir::separator() + "Papocchio");
 
     if (!papocchioDir.exists()) {
         if (!papocchioDir.mkpath(papocchioDir.absolutePath())) {
