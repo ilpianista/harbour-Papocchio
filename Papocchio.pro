@@ -7,7 +7,6 @@ SOURCES += \
 
 OTHER_FILES += \
     qml/cover/CoverPage.qml \
-    translations/*.ts \
     qml/pages/MainPage.qml \
     qml/Papocchio.qml \
     harbour-papocchio.desktop \
