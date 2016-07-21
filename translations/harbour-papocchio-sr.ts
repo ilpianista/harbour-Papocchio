@@ -21,10 +21,5 @@
         <source>Clearing the canvas...</source>
         <translation>Брисање платна...</translation>
     </message>
-    <message>
-        <location filename="../qml/pages/MainPage.qml" line="129"/>
-        <source>Quitting...</source>
-        <translation>Одустајање...</translation>
-    </message>
 </context>
 </TS>

@@ -38,12 +38,6 @@ int main(int argc, char *argv[])
     view->setPersistentOpenGLContext(true);
     view->setPersistentSceneGraph(true);
 
-    // Disable swipe gestures in proper way
-    view->setFlags(view->flags()|Qt::WindowOverridesSystemGestures);
-
-    // Make Qt.quit() work from QML
-    QObject::connect(view->engine(), &QQmlEngine::quit, app.data(), &QCoreApplication::quit);
-
     view->rootContext()->setContextProperty("papocchioDir", papocchioDir());
 
     view->show();

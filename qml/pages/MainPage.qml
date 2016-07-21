@@ -90,7 +90,7 @@ Page {
                 stepSize: 1
                 value: defaultStrokeSize
                 valueText: value
-                width: parent.width - edit.width - save.width - clearBtn.width - quit.width - (Theme.paddingMedium * 4)
+                width: parent.width - edit.width - save.width - clearBtn.width - (Theme.paddingMedium * 4)
                 anchors.verticalCenter: parent.verticalCenter
 
                 // Don't waste space
@@ -116,23 +116,6 @@ Page {
 
                 RemorseItem {
                     id: remorseClear
-                }
-            }
-
-            IconButton {
-                id: quit
-                icon.source: "image://theme/icon-m-close"
-                anchors.verticalCenter: parent.verticalCenter
-                width: 50
-
-                onClicked: {
-                    remorseQuit.execute(menu, qsTr("Quitting..."), function() {
-                        Qt.quit();
-                    }, 1000);
-                }
-
-                RemorseItem {
-                    id: remorseQuit
                 }
             }
         }

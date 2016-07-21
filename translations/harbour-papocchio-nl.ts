@@ -21,10 +21,5 @@
         <source>Clearing the canvas...</source>
         <translation>Leegmaken canvas...</translation>
     </message>
-    <message>
-        <location filename="../qml/pages/MainPage.qml" line="129"/>
-        <source>Quitting...</source>
-        <translation>Afsluiten...</translation>
-    </message>
 </context>
 </TS>
