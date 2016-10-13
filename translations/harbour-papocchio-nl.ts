@@ -4,7 +4,7 @@
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="25"/>
         <source>Draw!</source>
-        <translation>Tekenen!</translation>
+        <translation>Teken!</translation>
     </message>
 </context>
 <context>
@@ -12,12 +12,12 @@
     <message>
         <location filename="../qml/pages/MainPage.qml" line="76"/>
         <source>Saving the canvas...</source>
-        <translation>Opslaan canvas...</translation>
+        <translation>Canvas wordt opgeslagen...</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="112"/>
         <source>Clearing the canvas...</source>
-        <translation>Leegmaken canvas...</translation>
+        <translation>Canvas wordt leeggemaakt...</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="129"/>
