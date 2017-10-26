@@ -11,17 +11,17 @@
     <name>MainPage</name>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="76"/>
-        <source>Saving the canvas...</source>
-        <translation>Ukládá se plátno...</translation>
+        <source>Saving the canvas…</source>
+        <translation>Ukládá se plátno…</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="112"/>
-        <source>Clearing the canvas...</source>
-        <translation>Vyprazdňuje se plátno...</translation>
+        <source>Clearing the canvas…</source>
+        <translation>Vyprazdňuje se plátno…</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="129"/>
-        <source>Quitting...</source>
+        <source>Quitting…</source>
         <translation type="unfinished"/>
     </message>
 </context>
