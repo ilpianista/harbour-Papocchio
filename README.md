@@ -6,7 +6,9 @@ A free-hand draw application for [Sailfish OS](https://sailfishos.org).
 
 ## Translations
 
-Translations via [Transifex](https://www.transifex.com/ilpianista-harbour/harbour-Papocchio/dashboard/), thank you!
+[![Translation status](https://hosted.weblate.org/widgets/harbour-papocchio/-/svg-badge.svg)](https://hosted.weblate.org/engage/harbour-papocchio/?utm_source=widget)
+
+Translations via [Weblate](https://hosted.weblate.org/projects/harbour-papocchio/), thank you!
 
 ## Icon
 
