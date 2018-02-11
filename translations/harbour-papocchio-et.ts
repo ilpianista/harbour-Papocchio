@@ -6,7 +6,7 @@
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="25"/>
         <source>Draw!</source>
-        <translation></translation>
+        <translation>Joonista!</translation>
     </message>
 </context>
 <context>
@@ -14,17 +14,17 @@
     <message>
         <location filename="../qml/pages/MainPage.qml" line="76"/>
         <source>Saving the canvas…</source>
-        <translation></translation>
+        <translation>Lõuendit salvestatakse…</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="112"/>
         <source>Clearing the canvas…</source>
-        <translation></translation>
+        <translation>Lõuendit puhastatakse…</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="129"/>
         <source>Quitting…</source>
-        <translation></translation>
+        <translation>Väljumine…</translation>
     </message>
 </context>
 </TS>
