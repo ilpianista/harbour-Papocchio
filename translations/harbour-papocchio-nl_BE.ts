@@ -6,7 +6,7 @@
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="25"/>
         <source>Draw!</source>
-        <translation>Tekend!</translation>
+        <translation>Tekent!</translation>
     </message>
 </context>
 <context>
