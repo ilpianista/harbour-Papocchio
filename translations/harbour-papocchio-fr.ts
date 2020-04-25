@@ -6,7 +6,7 @@
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="25"/>
         <source>Draw!</source>
-        <translation type="unfinished"></translation>
+        <translation>Dessinez !</translation>
     </message>
 </context>
 <context>
@@ -14,17 +14,17 @@
     <message>
         <location filename="../qml/pages/MainPage.qml" line="76"/>
         <source>Saving the canvas…</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrement de la toile…</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="112"/>
         <source>Clearing the canvas…</source>
-        <translation type="unfinished"></translation>
+        <translation>Nettoyage de la toile…</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="129"/>
         <source>Quitting…</source>
-        <translation type="unfinished"></translation>
+        <translation>Sortie…</translation>
     </message>
 </context>
 </TS>
