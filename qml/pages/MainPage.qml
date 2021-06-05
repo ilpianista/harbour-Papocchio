@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2014-2015 Andrea Scarpino <me@andreascarpino.it>
+    Copyright (C) 2014-2021 Andrea Scarpino <andrea@scarpino.dev>
     All rights reserved.
 
     This program is free software: you can redistribute it and/or modify
