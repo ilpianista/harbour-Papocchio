@@ -35,6 +35,5 @@ TRANSLATIONS += \
     translations/harbour-papocchio-sr.ts \
     translations/harbour-papocchio-sv.ts \
     translations/harbour-papocchio-tr.ts \
-    translations/harbour-papocchio.ts \
     translations/harbour-papocchio-tzm.ts \
     translations/harbour-papocchio-zh_Hant.ts
