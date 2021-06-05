@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS language="ru_RU" version="2.1">
+<TS version="2.1" language="ru_RU">
 <context>
     <name>CoverPage</name>
     <message>
