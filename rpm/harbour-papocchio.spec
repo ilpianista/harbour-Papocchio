@@ -30,6 +30,24 @@ BuildRequires:  desktop-file-utils
 %description
 An application to paint using your finger!
 
+%if "%{?vendor}" == "chum"
+PackageName: Papocchio
+Type: desktop-application
+DeveloperName: Andrea Scarpino
+Categories:
+ - Graphics
+Custom:
+  Repo: https://gitlab.com/ilpianista/harbour-Papocchio
+Icon: https://gitlab.com/ilpianista/harbour-Papocchio/-/raw/master/icons/harbour-papocchio.svg
+Screenshots:
+ - https://gitlab.com/ilpianista/harbour-Papocchio/-/raw/master/screenshots/screenshot_1.png
+ - https://gitlab.com/ilpianista/harbour-Papocchio/-/raw/master/screenshots/screenshot_2.png
+Url:
+  Homepage: https://gitlab.com/ilpianista/harbour-Papocchio
+  Bugtracker: https://gitlab.com/ilpianista/harbour-Papocchio/-/issues
+  Donation: https://paypal.me/andreascarpino
+%endif
+
 
 %prep
 %setup -q -n %{name}-%{version}
