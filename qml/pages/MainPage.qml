@@ -73,7 +73,7 @@ Page {
                 }
 
                 onClicked: {
-                    remorseSave.execute(menu, qsTr("Saving the canvas..."), function() {
+                    remorseSave.execute(menu, qsTr("Saving the canvas…"), function() {
                         canvas.save(papocchioDir + pictureName());
                     }, 3000);
                 }
@@ -109,7 +109,7 @@ Page {
                 width: 50
 
                 onClicked: {
-                    remorseClear.execute(menu, qsTr("Clearing the canvas..."), function() {
+                    remorseClear.execute(menu, qsTr("Clearing the canvas…"), function() {
                         canvas.clear();
                     }, 3000);
                 }

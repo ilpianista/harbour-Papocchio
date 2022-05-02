@@ -13,13 +13,13 @@
     <name>MainPage</name>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="76"/>
-        <source>Saving the canvas...</source>
-        <translation>Opslaan canvas...</translation>
+        <source>Saving the canvas…</source>
+        <translation>Opslaan canvas…</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="112"/>
-        <source>Clearing the canvas...</source>
-        <translation>Leegmaken canvas...</translation>
+        <source>Clearing the canvas…</source>
+        <translation>Leegmaken canvas…</translation>
     </message>
 </context>
 </TS>

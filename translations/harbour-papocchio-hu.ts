@@ -21,10 +21,5 @@
         <source>Clearing the canvas…</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <location filename="../qml/pages/MainPage.qml" line="129"/>
-        <source>Quitting…</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 </TS>

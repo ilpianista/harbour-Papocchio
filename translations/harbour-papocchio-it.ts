@@ -13,13 +13,13 @@
     <name>MainPage</name>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="76"/>
-        <source>Saving the canvas...</source>
-        <translation>Sto salvando l&apos;immagine...</translation>
+        <source>Saving the canvas…</source>
+        <translation>Sto salvando l&apos;immagine…</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="112"/>
-        <source>Clearing the canvas...</source>
-        <translation>Sto cancellando l&apos;immagine...</translation>
+        <source>Clearing the canvas…</source>
+        <translation>Sto cancellando l&apos;immagine…</translation>
     </message>
 </context>
 </TS>
