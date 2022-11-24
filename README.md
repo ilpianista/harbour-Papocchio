@@ -2,8 +2,6 @@
 
 A free-hand draw application for [Sailfish OS](https://sailfishos.org).
 
-[![Build Status](https://gitlab.com/ilpianista/harbour-Papocchio/badges/master/pipeline.svg)](https://gitlab.com/ilpianista/harbour-Papocchio/pipelines)
-
 ## Translations
 
 [![Translation status](https://hosted.weblate.org/widgets/harbour-papocchio/-/svg-badge.svg)](https://hosted.weblate.org/engage/harbour-papocchio/?utm_source=widget)
