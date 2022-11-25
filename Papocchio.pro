@@ -30,6 +30,7 @@ TRANSLATIONS += \
     translations/harbour-papocchio-hr.ts \
     translations/harbour-papocchio-hu.ts \
     translations/harbour-papocchio-it.ts \
+    translations/harbour-papocchio-lt.ts \
     translations/harbour-papocchio-nb_NO.ts \
     translations/harbour-papocchio-nl_BE.ts \
     translations/harbour-papocchio-nl.ts \
