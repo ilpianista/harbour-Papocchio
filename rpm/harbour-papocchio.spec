@@ -38,14 +38,14 @@ Categories:
  - Graphics
 Custom:
   Repo: https://github.com/ilpianista/harbour-Papocchio
-Icon: https://github.com/ilpianista/harbour-Papocchio/-/raw/master/icons/harbour-papocchio.svg
+Icon: https://raw.githubusercontent.com/ilpianista/harbour-Papocchio/master/icons/harbour-papocchio.svg
 Screenshots:
- - https://github.com/ilpianista/harbour-Papocchio/-/raw/master/screenshots/screenshot_1.png
- - https://github.com/ilpianista/harbour-Papocchio/-/raw/master/screenshots/screenshot_2.png
+ - https://raw.githubusercontent.com/ilpianista/harbour-Papocchio/master/screenshots/screenshot_1.png
+ - https://raw.githubusercontent.com/ilpianista/harbour-Papocchio/master/screenshots/screenshot_2.png
 Url:
   Homepage: https://github.com/ilpianista/harbour-Papocchio
   Bugtracker: https://github.com/ilpianista/harbour-Papocchio/-/issues
-  Donation: https://paypal.me/andreascarpino
+  Donation: https://liberapay.com/ilpianista
 %endif
 
 
