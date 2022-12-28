@@ -17,6 +17,7 @@
 */
 
 #include <QtQuick>
+#include <QStandardPaths>
 
 #include <sailfishapp.h>
 
