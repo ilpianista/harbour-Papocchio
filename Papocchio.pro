@@ -39,4 +39,4 @@ TRANSLATIONS += \
     translations/harbour-papocchio-sv.ts \
     translations/harbour-papocchio-tr.ts \
     translations/harbour-papocchio-tzm.ts \
-    translations/harbour-papocchio-zh_Hant.ts
+    translations/harbour-papocchio-zgh.ts
