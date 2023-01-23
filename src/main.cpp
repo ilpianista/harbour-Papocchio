@@ -17,6 +17,7 @@
 */
 
 #include <QtQuick>
+#include <QStandardPaths>
 
 #include <sailfishapp.h>
 
@@ -28,7 +29,7 @@ int main(int argc, char *argv[])
     QScopedPointer<QQuickView> view(SailfishApp::createView());
 
     QCoreApplication::setApplicationName(QStringLiteral("harbour-papocchio"));
-    QCoreApplication::setOrganizationDomain(QStringLiteral("andreascarpino.it"));
+    QCoreApplication::setOrganizationName(QStringLiteral("andreascarpino.it"));
 
     view->setSource(SailfishApp::pathTo("qml/Papocchio.qml"));
 

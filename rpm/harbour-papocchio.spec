@@ -44,7 +44,7 @@ Screenshots:
  - https://raw.githubusercontent.com/ilpianista/harbour-Papocchio/master/screenshots/screenshot_2.png
 Url:
   Homepage: https://github.com/ilpianista/harbour-Papocchio
-  Bugtracker: https://github.com/ilpianista/harbour-Papocchio/-/issues
+  Bugtracker: https://github.com/ilpianista/harbour-Papocchio/issues
   Donation: https://liberapay.com/ilpianista
 %endif
 
