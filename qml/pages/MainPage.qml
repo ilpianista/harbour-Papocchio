@@ -31,7 +31,7 @@ Page {
 
         Row {
             id: menu
-            spacing: Theme.paddingMedium
+            spacing: Theme.paddingLarge
             width: parent.width
             // Workaround: we don't want the Slider animation to resize this!
             height: Theme.itemSizeMedium
@@ -40,7 +40,7 @@ Page {
                 id: edit
                 icon.source: "image://theme/icon-s-edit"
                 anchors.verticalCenter: parent.verticalCenter
-                width: 50
+                width: 100
 
                 // default value for the rubber
                 property real prevLineWidth: defaultRubberSize;
@@ -90,7 +90,7 @@ Page {
                 stepSize: 1
                 value: defaultStrokeSize
                 valueText: value
-                width: parent.width - edit.width - save.width - clearBtn.width - quit.width - (Theme.paddingMedium * 4)
+                width: parent.width - edit.width - save.width - clearBtn.width - quit.width - (Theme.paddingLarge * 5)
                 anchors.verticalCenter: parent.verticalCenter
 
                 // Don't waste space
