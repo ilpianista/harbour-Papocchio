@@ -2,6 +2,10 @@
 
 A free-hand draw application for [Sailfish OS](https://sailfishos.org).
 
+## Install
+
+Install via Jolla Store, [Chum](https://github.com/sailfishos-chum/main) or [OpenRepos](https://openrepos.net/content/ilpianista/papocchio).
+
 ## Translations
 
 [![Translation status](https://hosted.weblate.org/widgets/harbour-papocchio/-/svg-badge.svg)](https://hosted.weblate.org/engage/harbour-papocchio/?utm_source=widget)
