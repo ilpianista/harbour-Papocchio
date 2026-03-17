@@ -16,8 +16,8 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include <QtQuick>
 #include <QStandardPaths>
+#include <QtQuick>
 
 #include <sailfishapp.h>
 
@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
     view->setPersistentSceneGraph(true);
 
     // Disable swipe gestures in proper way
-    view->setFlags(view->flags()|Qt::WindowOverridesSystemGestures);
+    view->setFlags(view->flags() | Qt::WindowOverridesSystemGestures);
 
     // Make Qt.quit() work from QML
     QObject::connect(view->engine(), &QQmlEngine::quit, app.data(), &QCoreApplication::quit);
