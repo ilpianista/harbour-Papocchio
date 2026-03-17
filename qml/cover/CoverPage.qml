@@ -26,5 +26,3 @@ CoverBackground {
         icon.source: "/usr/share/icons/hicolor/86x86/apps/harbour-papocchio.png"
     }
 }
-
-

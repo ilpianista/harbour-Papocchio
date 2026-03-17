@@ -43,14 +43,14 @@ Page {
                 width: 100
 
                 // default value for the rubber
-                property real prevLineWidth: defaultRubberSize;
+                property real prevLineWidth: defaultRubberSize
 
                 onClicked: {
                     if (canvas.strokeStyle == defaultStrokeColor) {
-                        icon.source = "image://theme/icon-camera-focus"
+                        icon.source = "image://theme/icon-camera-focus";
                         canvas.strokeStyle = defaultFillColor;
                     } else {
-                        icon.source = "image://theme/icon-s-edit"
+                        icon.source = "image://theme/icon-s-edit";
                         canvas.strokeStyle = defaultStrokeColor;
                     }
 
@@ -73,7 +73,7 @@ Page {
                 }
 
                 onClicked: {
-                    remorseSave.execute(menu, qsTr("Saving the canvas…"), function() {
+                    remorseSave.execute(menu, qsTr("Saving the canvas…"), function () {
                         canvas.save(papocchioDir + pictureName());
                     }, 3000);
                 }
@@ -109,7 +109,7 @@ Page {
                 width: 50
 
                 onClicked: {
-                    remorseClear.execute(menu, qsTr("Clearing the canvas…"), function() {
+                    remorseClear.execute(menu, qsTr("Clearing the canvas…"), function () {
                         canvas.clear();
                     }, 3000);
                 }
@@ -126,7 +126,7 @@ Page {
                 width: 50
 
                 onClicked: {
-                    remorseQuit.execute(menu, qsTr("Quitting…"), function() {
+                    remorseQuit.execute(menu, qsTr("Quitting…"), function () {
                         Qt.quit();
                     }, 1000);
                 }
