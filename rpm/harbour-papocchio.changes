@@ -1,4 +1,7 @@
-* Fri Apr 03 2026 Andrea Scarpino <andrea@scarpino.dev> 1.4.5-1
+* Fri Apr 03 2026 Andrea Scarpino <andrea@scarpino.dev> 1.5.0-1
+- Show the image in the cover
+- Remove the quit button and allow to unlock/lock SailfishOS gestures
+- Better icon for the rubber
 - Add Tamil translation
 
 * Wed May 17 2023 Andrea Scarpino <andrea@scarpino.dev> 1.4.4-1

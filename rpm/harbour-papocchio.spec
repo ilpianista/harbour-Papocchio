@@ -8,7 +8,7 @@ Name:       harbour-papocchio
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Paint using your finger
-Version:    1.4.5
+Version:    1.5.0
 Release:    1
 Group:      Qt/Qt
 License:    GPLv3
