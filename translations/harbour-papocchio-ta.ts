@@ -2,22 +2,14 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="ta">
 <context>
-    <name>CoverPage</name>
-    <message>
-        <location filename="../qml/cover/CoverPage.qml" line="25"/>
-        <source>Draw!</source>
-        <translation>டிரா!</translation>
-    </message>
-</context>
-<context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="75"/>
+        <location filename="../qml/pages/MainPage.qml" line="86"/>
         <source>Saving the canvas…</source>
         <translation>கேன்வாசைச் சேமிக்கிறது…</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="111"/>
+        <location filename="../qml/pages/MainPage.qml" line="125"/>
         <source>Clearing the canvas…</source>
         <translation>கேன்வாசை அழித்தல்…</translation>
     </message>

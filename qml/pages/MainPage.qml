@@ -25,6 +25,15 @@ Page {
     readonly property color defaultStrokeColor: Qt.rgba(0, 0, 0, 1)
     readonly property color defaultFillColor: Qt.rgba(1, 1, 1, 1)
 
+    Connections {
+        target: Qt.application
+        onActiveChanged: {
+            if (!Qt.application.active) {
+                appWindow.canvasData = canvas.toDataURL();
+            }
+        }
+    }
+
     Column {
         anchors.fill: parent
 

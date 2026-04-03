@@ -15,14 +15,13 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
 CoverBackground {
-
-    CoverPlaceholder {
-        text: qsTr("Draw!")
-        icon.source: "/usr/share/icons/hicolor/86x86/apps/harbour-papocchio.png"
+    Image {
+        anchors.fill: parent
+        source: appWindow.canvasData
+        fillMode: Image.PreserveAspectFit
     }
 }

@@ -2,22 +2,14 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="eo">
 <context>
-    <name>CoverPage</name>
-    <message>
-        <location filename="../qml/cover/CoverPage.qml" line="25"/>
-        <source>Draw!</source>
-        <translation>Desegnu!</translation>
-    </message>
-</context>
-<context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="75"/>
+        <location filename="../qml/pages/MainPage.qml" line="86"/>
         <source>Saving the canvas…</source>
         <translation>Konservante la kanvason…</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="111"/>
+        <location filename="../qml/pages/MainPage.qml" line="125"/>
         <source>Clearing the canvas…</source>
         <translation>Forviŝante la kanvason…</translation>
     </message>
