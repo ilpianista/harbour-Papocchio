@@ -120,18 +120,12 @@ Page {
 
             IconButton {
                 id: quit
-                icon.source: "image://theme/icon-m-close"
+                icon.source: gestureController.gesturesEnabled ? "image://theme/icon-m-screenlock" : "image://theme/icon-m-gesture"
                 anchors.verticalCenter: parent.verticalCenter
                 width: 50
 
                 onClicked: {
-                    remorseQuit.execute(menu, qsTr("Quitting…"), function () {
-                        Qt.quit();
-                    }, 1000);
-                }
-
-                RemorseItem {
-                    id: remorseQuit
+                    gestureController.toggleGestures();
                 }
             }
         }

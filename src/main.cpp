@@ -21,6 +21,8 @@
 
 #include <sailfishapp.h>
 
+#include "gesturecontroller.h"
+
 QString papocchioDir();
 
 int main(int argc, char *argv[])
@@ -39,13 +41,10 @@ int main(int argc, char *argv[])
     view->setPersistentOpenGLContext(true);
     view->setPersistentSceneGraph(true);
 
-    // Disable swipe gestures in proper way
-    view->setFlags(view->flags() | Qt::WindowOverridesSystemGestures);
-
-    // Make Qt.quit() work from QML
-    QObject::connect(view->engine(), &QQmlEngine::quit, app.data(), &QCoreApplication::quit);
+    GestureController *controller = new GestureController(view.data(), app.data());
 
     view->rootContext()->setContextProperty("papocchioDir", papocchioDir());
+    view->rootContext()->setContextProperty("gestureController", controller);
 
     view->show();
 

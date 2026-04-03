@@ -12,19 +12,14 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="76"/>
+        <location filename="../qml/pages/MainPage.qml" line="75"/>
         <source>Saving the canvas…</source>
         <translation>Чување платна…</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="112"/>
+        <location filename="../qml/pages/MainPage.qml" line="111"/>
         <source>Clearing the canvas…</source>
         <translation>Брисање платна…</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/MainPage.qml" line="129"/>
-        <source>Quitting…</source>
-        <translation>Одустајање…</translation>
     </message>
 </context>
 </TS>

@@ -17,7 +17,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     strategy:
       matrix:
         arch: ['armv7hl', 'aarch64', 'i486']
@@ -36,14 +36,3 @@ jobs:
       with:
         name: rpms-${{ matrix.arch }}
         path: RPMS
-
-    - name: Create release
-      if: startsWith(github.ref, 'refs/tags/')
-      run: |
-        set -x
-        tag_name="${GITHUB_REF##*/}"
-        gh release create "$tag_name" RPMS/*.rpm \
-          --title "$tag_name" \
-          --generate-notes
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -12,19 +12,14 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="76"/>
+        <location filename="../qml/pages/MainPage.qml" line="75"/>
         <source>Saving the canvas…</source>
         <translation>Bezig met opslaan van canvas…</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="112"/>
+        <location filename="../qml/pages/MainPage.qml" line="111"/>
         <source>Clearing the canvas…</source>
         <translation>Bezig met wissen van canvas…</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/MainPage.qml" line="129"/>
-        <source>Quitting…</source>
-        <translation>Bezig met afsluiten…</translation>
     </message>
 </context>
 </TS>

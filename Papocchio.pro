@@ -5,7 +5,11 @@ CONFIG += sailfishapp
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
 
 SOURCES += \
+    src/gesturecontroller.cpp \
     src/main.cpp
+
+HEADERS += \
+    src/gesturecontroller.h
 
 OTHER_FILES += \
     qml/cover/CoverPage.qml \
