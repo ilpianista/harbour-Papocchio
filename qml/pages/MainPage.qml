@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2014-2021 Andrea Scarpino <andrea@scarpino.dev>
+    Copyright (C) 2014-2026 Andrea Scarpino <andrea@scarpino.dev>
     All rights reserved.
 
     This program is free software: you can redistribute it and/or modify
@@ -15,7 +15,6 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
@@ -38,7 +37,7 @@ Page {
 
             IconButton {
                 id: edit
-                icon.source: "image://theme/icon-s-edit"
+                icon.source: "image://theme/icon-m-edit-selected"
                 anchors.verticalCenter: parent.verticalCenter
                 width: 100
 
@@ -47,10 +46,10 @@ Page {
 
                 onClicked: {
                     if (canvas.strokeStyle == defaultStrokeColor) {
-                        icon.source = "image://theme/icon-camera-focus";
+                        icon.source = "image://theme/icon-m-edit";
                         canvas.strokeStyle = defaultFillColor;
                     } else {
-                        icon.source = "image://theme/icon-s-edit";
+                        icon.source = "image://theme/icon-m-edit-selected";
                         canvas.strokeStyle = defaultStrokeColor;
                     }
 
