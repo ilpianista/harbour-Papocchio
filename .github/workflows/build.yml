@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-      - harbour
     tags:
       - '*'
   pull_request:
